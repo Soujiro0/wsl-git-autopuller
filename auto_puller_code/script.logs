@@ -1,0 +1,110 @@
+2026-06-28 22:31:45: New changes found on GitHub (Branch: main). Pulling code...
+From github.com:Soujiro0/sample-auto-puller
+ * branch            main       -> FETCH_HEAD
+Updating 174c71b..5d137e1
+Fast-forward
+ sample.txt | 1 +
+ 1 file changed, 1 insertion(+)
+2026-06-28 22:31:48: Code successfully pulled.
+2026-06-28 22:31:48: Update process complete.
+2026-06-28 22:40:04: New changes found on GitHub (Branch: main). Pulling code...
+From github.com:Soujiro0/locallink-anime-stream
+ * branch            main       -> FETCH_HEAD
+Updating b49ca48..a02ab9a
+Fast-forward
+ CHANGELOG.md      | 7 ++-----
+ package-lock.json | 4 ++--
+ 2 files changed, 4 insertions(+), 7 deletions(-)
+2026-06-28 22:40:09: Code successfully pulled.
+2026-06-28 22:40:09: Rebuilding and restarting Docker containers...
+ Container locallink-proxy Stopping 
+ Container locallink-proxy Stopped 
+ Container locallink-proxy Removing 
+ Container locallink-proxy Removed 
+ Container locallink-anime-stream Stopping 
+ Container locallink-anime-stream Stopped 
+ Container locallink-anime-stream Removing 
+ Container locallink-anime-stream Removed 
+ Network locallink-anime-stream_default Removing 
+ Network locallink-anime-stream_default Removed 
+ Image locallink-anime-stream-app:latest Building 
+#1 [internal] load local bake definitions
+#1 reading from stdin 592B done
+#1 DONE 0.0s
+
+#2 [internal] load build definition from Dockerfile
+#2 transferring dockerfile:
+#2 transferring dockerfile: 1.08kB done
+#2 DONE 0.0s
+
+#3 [internal] load metadata for docker.io/library/node:20-slim
+#3 DONE 1.8s
+
+#4 [internal] load .dockerignore
+#4 transferring context: 116B done
+#4 DONE 0.0s
+
+#5 [builder 1/6] FROM docker.io/library/node:20-slim@sha256:2cf067cfed83d5ea958367df9f966191a942351a2df77d6f0193e162b5febfc0
+#5 DONE 0.0s
+
+#6 [internal] load build context
+#6 transferring context: 161.13kB 0.1s done
+#6 DONE 0.1s
+
+#7 [production 5/8] RUN npm install --omit=dev
+#7 CACHED
+
+#8 [production 3/8] RUN apt-get update && apt-get install -y ca-certificates && rm -rf /var/lib/apt/lists/*
+#8 CACHED
+
+#9 [builder 3/6] COPY client/package.json ./
+#9 CACHED
+
+#10 [builder 4/6] RUN npm install --include=dev
+#10 CACHED
+
+#11 [production 6/8] COPY index.js ./
+#11 CACHED
+
+#12 [builder 5/6] COPY client/ ./
+#12 CACHED
+
+#13 [production 2/8] WORKDIR /app
+#13 CACHED
+
+#14 [production 7/8] COPY src/ ./src/
+#14 CACHED
+
+#15 [production 4/8] COPY package.json ./
+#15 CACHED
+
+#16 [builder 2/6] WORKDIR /app/client
+#16 CACHED
+
+#17 [builder 6/6] RUN npm run build
+#17 CACHED
+
+#18 [production 8/8] COPY --from=builder /app/client/dist ./client/dist
+#18 CACHED
+
+#19 exporting to image
+#19 exporting layers done
+#19 writing image sha256:d51b6228c2d27050fb56b77250c88b49617e3c121f28a1028f0dc42c758ebbe5 done
+#19 naming to docker.io/library/locallink-anime-stream-app:latest done
+#19 DONE 0.0s
+
+#20 resolving provenance for metadata file
+#20 DONE 0.0s
+ Image locallink-anime-stream-app:latest Built 
+ Network locallink-anime-stream_default Creating 
+ Network locallink-anime-stream_default Created 
+ Container locallink-anime-stream Creating 
+ Container locallink-anime-stream Created 
+ Container locallink-proxy Creating 
+ Container locallink-proxy Created 
+ Container locallink-anime-stream Starting 
+ Container locallink-anime-stream Started 
+ Container locallink-proxy Starting 
+ Container locallink-proxy Started 
+2026-06-28 22:40:24: Docker deployment successful.
+2026-06-28 22:40:24: Update process complete.
